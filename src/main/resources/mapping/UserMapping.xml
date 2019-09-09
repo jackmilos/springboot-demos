@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.demo.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="u_Name" jdbcType="VARCHAR" property="u_Name" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="sex" jdbcType="INTEGER" property="sex" />
+        <result column="userName" jdbcType="VARCHAR" property="userName" />
+        <result column="u_passWord" jdbcType="VARCHAR" property="passWord" />
+    </resultMap>
+
+    <select id="foundById" resultType="com.demo.entity.User">
+        select id,u_name,sex,age,username,u_password from t_user where id = #{id}
+    </select>
+
+    <select id="foundByName" resultType="com.demo.entity.User">
+        select id,u_name,username,u_password from t_user where username = #{username}
+    </select>
+
+    <insert id="insert" parameterType="com.demo.entity.User" keyProperty="id" useGeneratedKeys="true">
+        insert into t_user(id,username,u_password) values(#{id},#{username},#{u_password})
+    </insert>
+    
+    <delete id="delete" parameterType="int">
+        delete from t_user where id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.demo.entity.User">
+        update t_user set t_user.u_name=#{u_name},t_user.sex=#{sex},t_user.age=#{age} where t_user.username = #{username}
+    </update>
+    
+    <select id="listUser" resultType="com.demo.entity.User">
+        select id,u_name,sex,age,username,u_password from t_user
+    </select>
+
+    <select id="perList" resultType="com.demo.entity.Permission">
+        select p.id,p.r_name from t_permission p
+    </select>
+
+    <insert id="addPer" parameterType="int">
+        insert into user_role(user_id,role_id)
+        values(#{u_id},#{p_id})
+    </insert>
+
+    <select id="existPerList" resultType="com.demo.entity.Permission">
+        select p.id,p.r_name
+        from t_user u,t_role r,user_role ur,t_permission p
+        where u.id=#{u_id} and u.id=ur.user_id and ur.role_id=r.id and ur.role_id=p.id;
+    </select>
+
+    <select id="choosePerList" resultType="com.demo.entity.Permission">
+        select p.id,p.r_name
+        from t_user u,t_role r,user_role ur,t_permission p
+        where p.id not in(select p.id
+        from t_user u,t_role r,user_role ur,t_permission p
+        where u.id=#{u_id} and u.id=ur.user_id and ur.role_id=r.id and ur.role_id=p.id) GROUP BY id;
+    </select>
+
+    <insert id="addPerBatch" parameterType="java.util.List" keyProperty="id" useGeneratedKeys="true">
+        insert into user_role (user_id,role_id)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.u_id,jdbcType=INTEGER}, #{item.p_id,jdbcType=INTEGER})
+        </foreach>
+    </insert>
+</mapper>
