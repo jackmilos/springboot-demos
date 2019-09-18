@@ -21,3 +21,10 @@ spring:
     password: wlzl0119
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+#输出日志
+logging:
+  path: D:/data/myLog
+  file: myLog.log
+  level:
+    com.demo: debug
+    root: INFO

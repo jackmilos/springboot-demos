@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.demo.entity.Permission;
 import com.demo.entity.User;
 import com.demo.service.UserService;
+import com.demo.utils.LoggerUtil;
 import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +24,8 @@ import java.util.*;
 @RequestMapping(value = "/testboot", method = {RequestMethod.GET, RequestMethod.POST})
 public class UserControl {
     private static final Logger logger = LoggerFactory.getLogger(LoggerFactory.class);
+
+    private static final LoggerUtil loggerUtil = new LoggerUtil();
 
     @Autowired
     private UserService userService;
@@ -143,6 +146,8 @@ public class UserControl {
         List<User> user_list = userService.listUser();
         Lmv.setViewName("/ulist");
         request.setAttribute("user_list", user_list);
+        //输出日志到本地文档
+        loggerUtil.printInfo(LoggerUtil.class,"用户列表查询");
         logger.info("用户列表界面");
         return Lmv;
     }
