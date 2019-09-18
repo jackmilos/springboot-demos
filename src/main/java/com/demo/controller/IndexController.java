@@ -9,4 +9,9 @@ public class IndexController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/imgup")
+    public String imgup(){
+        return "imgup";
+    }
 }
