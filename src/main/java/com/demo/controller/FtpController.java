@@ -1,6 +1,7 @@
 package com.demo.controller;
 
 import com.demo.utils.FtpUtil;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,12 +40,15 @@ public class FtpController {
      * @return
      * @throws IOException
      */
+//    @RequestParam("file") MultipartFile file
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,String> uploadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException{
         Map<String, String> map = new HashMap<>();
         map.put("code","0");
         map.put("msg","上传文件失败");
+        System.out.println(request);
+        //String fileName = file.getName();
         String fileName = file.getOriginalFilename();
         logger.info("上传文件：{}", fileName);
         InputStream inputStream = file.getInputStream();

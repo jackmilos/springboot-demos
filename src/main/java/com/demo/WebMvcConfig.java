@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -52,5 +53,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
         StringHttpMessageConverter stringHttpMessageConverter =
                 new StringHttpMessageConverter(Charset.forName("UTF-8"));
         converters.add(stringHttpMessageConverter);
+    }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/ftp/upload");
     }
 }
