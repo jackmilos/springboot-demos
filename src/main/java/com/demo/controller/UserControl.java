@@ -2,6 +2,7 @@ package com.demo.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.demo.annotation.NoneAuth;
 import com.demo.entity.Permission;
 import com.demo.entity.User;
 import com.demo.service.UserService;
@@ -140,6 +141,7 @@ public class UserControl {
      * @param request
      * @return
      */
+    @NoneAuth
     @RequestMapping(value = "/ulist", method = RequestMethod.GET)
     public ModelAndView lUser(HttpServletRequest request) {
         ModelAndView Lmv = new ModelAndView();
