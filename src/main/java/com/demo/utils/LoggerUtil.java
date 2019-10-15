@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LoggerUtil {
+
     /**
      * 输出运行信息
      * @param clazz

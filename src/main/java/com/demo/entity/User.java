@@ -1,16 +1,24 @@
 package com.demo.entity;
 
+/**
+ * 用户实体类
+ */
 public class User {
+
     private Integer id;
+    //用户姓名
     private String u_name;
     private int sex;
     private int age;
+    //账号
     private String username;
+    //密码
     private String u_password;
 
     public String getU_name() {
         return u_name;
     }
+
 
     public void setU_name(String u_name) {
         this.u_name = u_name;
@@ -56,6 +64,6 @@ public class User {
     @Override
     public String toString(){
         return "User:{"+
-                "id:"+id+"username:"+username;
+                "id: "+id+" username: "+username + " u_password: " + u_password;
     }
 }

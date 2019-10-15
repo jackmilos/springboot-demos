@@ -2,108 +2,63 @@ package com.demo.service;
 
 import com.demo.entity.Permission;
 import com.demo.entity.User;
-import com.demo.dao.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author jack
- * 业务层
- */
-@Service
-public class UserService {
-    @Autowired
-    UserMapper userMapper;
+public interface UserService {
 
-    /**
-     * 通过id查找用户
-     * @param id
-     * @return
-     */
-    public User foundById(int id){
-        return userMapper.foundById(id);
-    }
+    User foundById(int id);
 
-    /**
-     * 通过姓名查找用户
-     * @param name
-     * @return
-     */
-    public User foundByName(String name){return userMapper.foundByName(name);}
+    User foundByName(String name);
 
-    /**
-     * 插入一条user数据，输入为username和u_password
-     * */
-    public ModelAndView insert(User user){
-        ModelAndView Imv = new ModelAndView();
-        userMapper.insert(user);
-        return Imv;
-    }
+    ModelAndView insert(User user);
 
-    /**
-     * 删除方法，以id为引
-     * @param id
-     * @return
-     */
-    public int delete(int id){
-        return userMapper.delete(id);
-    }
+    Object isLogin(User user);
 
-    /**
-     * 更改字段
-     * @param user
-     * @return
-     */
-    public int update(User user){
-        return userMapper.update(user);
-    }
+    //用户列表视图
+    ModelAndView lUser(HttpServletRequest request);
 
-    /**
-     * 获取所有用户，以List返回
-     * @return
-     */
-    public List<User> listUser(){
-        return userMapper.listUser();
-    }
+    //删除用户
+    String delete(int id);
 
-    /**
-     * 权限名列表
-     * @return
-     */
-    public List<Permission> perList(){
-        return userMapper.perList();
-    }
+    //修改用户
+    String update(User user);
 
-    /**
-     * 根据用户id查询该用户的权限列表
-     * @return
-     */
-    public List<Permission> existPerList(int id){return userMapper.existPerList(id);}
+    //获取所有用户
+    List<User> listUser();
 
-    /**
-     * 添加权限（通过用户角色表添加）
-     * @param u_id
-     * @param p_id
-     * @return
-     */
-    public int addPer(int u_id,int p_id){
-        return userMapper.addPer(u_id,p_id);
-    }
+    //权限管理页面逻辑
+    ModelAndView perManage(HttpServletRequest request,int u_id);
 
-    /**
-     * 批量
-     * @param u_rids
-     * @return
-     */
-    public String addPerBatch(List<Map> u_rids){return userMapper.addPerBatch(u_rids);}
-    /**
-     * 选择要添加的权限
-     * @param id
-     * @return
-     */
-    public List<Permission> choosePerList(int id){return userMapper.choosePerList(id);}
+    //展示权限视图
+    ModelAndView perShow(HttpServletRequest request, int id);
+
+    //获取所有权限
+    List<Permission> perList();
+
+    //单个权限添加视图
+    ModelAndView addPermission(HttpServletRequest request, int u_id, int perid);
+
+    //已存在的用户权限查询
+    List<Permission> existPerList(int id);
+
+    //单个权限添加
+    int addPer(int u_id,int p_id);
+
+    //添加权限列表
+    List<Permission> choosePerList(int id);
+
+    //批量权限添加
+    String addPerBatch(List<Map> u_rids);
+
+    //批量选择视图
+    ModelAndView batchAdd(HttpServletRequest request);
+
+    //批量权限添加视图
+    ModelAndView batchaddper(HttpServletRequest request,
+                             @RequestBody String  requestText);
 }

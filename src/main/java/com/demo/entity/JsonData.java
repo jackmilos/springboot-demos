@@ -6,8 +6,10 @@ import com.demo.enums.HttpStatusEnum;
 /**
  * @author jack
  * 在此类中定义Json数据类型属性和格式
+ * 状态统一以JsonData返回
  */
 public class JsonData {
+
     private static final long serialVersionUID = 1L;
 
     private Integer code;

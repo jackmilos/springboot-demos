@@ -21,26 +21,39 @@ public class FtpUtil {
      * ftp服务器的ip地址
      */
     private static final String FTP_ADDRESS = "192.168.215.128";
+
     /**
      * 端口号
      */
     private static final int FTP_PORT = 21;
+
     /**
      * ftp授权的用户名
      */
     private static final String FTP_USERNAME = "test";
+
     /**
      * 密码
      */
     private static final String FTP_PASSWORD= "123456";
+
     /**
      * ftp中图片路径
      */
     public final String FTP_BASEPATH = "tmp/test/ImgLib/aa";
+
+    /**
+     * 上传文件
+     * @param originFileName
+     * @param input
+     * @return
+     */
     public boolean uploadFile(String originFileName, InputStream input){
+
         boolean success = false;
         FTPClient ftp = new FTPClient();
         ftp.setControlEncoding("GBK");
+        //连接ftp服务器
         try{
             int reply;
             ftp.connect(FTP_ADDRESS, FTP_PORT);
@@ -52,9 +65,7 @@ public class FtpUtil {
             }
             ftp.setFileType(FTPClient.BINARY_FILE_TYPE);
 
-
             String filepath = FTP_BASEPATH;
-
 
             //如果返回false则代表切换不到该目录，如果返回true则切换成功
             //pathname的取值和ftp设置的用户默认访问路径有关
@@ -69,7 +80,7 @@ public class FtpUtil {
             }
              */
             System.out.println(ftp.changeWorkingDirectory("/ImgLib"));
-            //FTPFile[]  ftpFiles = ftp.listFiles(filepath);
+            //上传文件
             ftp.storeFile(originFileName, input);
             input.close();
             ftp.logout();
@@ -78,6 +89,7 @@ public class FtpUtil {
             System.out.println("error");
             e.printStackTrace();
         } finally {
+            //关闭ftp连接
             if(ftp.isConnected()){
                 try{
                     ftp.disconnect();

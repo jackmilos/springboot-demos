@@ -1,8 +1,8 @@
 package com.demo.utils;
 
-import com.demo.dao.mapper.UserMapper;
 import com.demo.entity.User;
-import com.demo.service.UserService;
+import com.demo.service.impl.UserServiceImpl;
+import com.sun.deploy.net.HttpResponse;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -12,10 +12,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletResponse;
+import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.util.List;
 
 /**
@@ -24,10 +27,13 @@ import java.util.List;
 @Component
 public class ExportUtil {
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @SuppressWarnings("dep-ann")
-    public void ExportExcel(){
+    /**
+     * 以流的方式导出Excel表格供客户端下载
+     */
+    public void exportExcel(HttpServletResponse response){
         XSSFWorkbook workbook =  new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("0");
         for (int i = 0;i < 9; i++){
@@ -110,7 +116,6 @@ public class ExportUtil {
                 cellCheck = rowCheck.createCell(j);
                 cellCheck.setCellType(CellType.STRING);
                 cellCheck.setCellStyle(cellStyle);
-//                cellCheck.setCellValue("i="+i+";j="+j);
                 switch (j){
                     case 0:cellCheck.setCellValue(userList.get(i).getId()); continue;
                     case 1:cellCheck.setCellValue(userList.get(i).getU_name()); continue;
@@ -120,35 +125,32 @@ public class ExportUtil {
                 }
             }
         }
-        /**
-         * 页脚
-         */
-        //当前用户桌面
-//        File desktopDir = FileSystemView.getFileSystemView()
-//                .getHomeDirectory();
-//        String desktopPath = desktopDir.getAbsolutePath();
-//        File file = new File(desktopPath + "\\这是生成的Excel表格.xlsx");
 
-        exportOutPutExcel("D:\\users.xlsx",workbook);
+        //当前用户桌面
+        File desktopDir = FileSystemView.getFileSystemView()
+                .getHomeDirectory();
+//        String desktopPath = desktopDir.getAbsolutePath();//
+
+        //尝试将文件流推出供客户端下载
+        try{
+//            response.setContentType("application/octet-stream");
+            String fileName = "用户信息表.xlsx";
+            response.setHeader("Content-disposition", "attachment;filename=" +  URLEncoder.encode(fileName, "UTF-8"));
+            OutputStream outputStream = response.getOutputStream();
+            response.flushBuffer();
+            workbook.write(outputStream);
+            outputStream.flush();
+            outputStream.close();
+        }catch (IOException e){
+            System.err.println(e.getMessage());
+        }
         System.out.println("导出成功");
     }
+
     /**
      * 设置Excel页脚
      */
     public void setExcelFooterName(String customExcelFooterName,int setExcelFooterNumber,XSSFWorkbook workbook){
         workbook.setSheetName(setExcelFooterNumber,customExcelFooterName);
-    }
-    /**
-     * 输出流 导出Excel到桌面
-     */
-    public void exportOutPutExcel(String exportPositionPath,XSSFWorkbook workbook){
-        try{
-            File file = new File(exportPositionPath);
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            workbook.write(fileOutputStream);
-            fileOutputStream.close();
-        }catch (IOException e){
-            System.err.println(e.getMessage());
-        }
     }
 }

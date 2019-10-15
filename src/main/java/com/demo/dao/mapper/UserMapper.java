@@ -9,9 +9,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * dao层，访问数据
+ */
 @Repository
 @Mapper
 public interface UserMapper {
+
     /**
      * 通过id查找user
      * @param id
@@ -81,5 +85,10 @@ public interface UserMapper {
      */
     List<Permission> choosePerList(int id);
 
+    /**
+     * 批量添加权限
+     * @param u_rids
+     * @return
+     */
     String addPerBatch(List<Map> u_rids);
 }

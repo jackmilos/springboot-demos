@@ -55,6 +55,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
         converters.add(stringHttpMessageConverter);
     }
 
+    /**
+     * 配置支持跨域请求的接口
+     * @param registry
+     */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/ftp/upload");

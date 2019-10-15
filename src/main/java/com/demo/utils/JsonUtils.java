@@ -10,6 +10,7 @@ import java.io.IOException;
  * JSON字符处理类，包括JSON字符对象间的转换方法
  */
 public class JsonUtils {
+
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     /**

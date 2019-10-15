@@ -1,10 +1,12 @@
 package com.demo.entity;
 
+/**
+ * 权限的id和权限名称
+ */
 public class Permission {
-    /**
-     * 权限的id和权限名称
-     */
+
     private Integer id;
+    //角色id
     private String r_name;
 
     public Integer getId() {
