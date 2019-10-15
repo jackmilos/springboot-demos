@@ -1,6 +1,7 @@
 package com.demo.controller;
 
 import com.demo.annotation.NoneAuth;
+import com.demo.entity.JsonData;
 import com.demo.service.ExcelThreadService;
 import com.demo.utils.ExportUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +18,11 @@ public class ExportController {
     private ExportUtil exportUtil;
     @NoneAuth
     @RequestMapping(value = "excel",method = RequestMethod.POST)
-    public void export() throws InterruptedException {
+    public Object export() throws InterruptedException {
        // ExcelThreadService threadService = new ExcelThreadService();
         //Thread t1 = new Thread(threadService);
         Thread thread = new Thread(() -> exportUtil.ExportExcel());
         thread.start();
+        return JsonData.buildSuccess();
     }
 }

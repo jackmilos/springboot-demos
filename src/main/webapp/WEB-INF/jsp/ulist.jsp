@@ -33,7 +33,7 @@
 </br>
 <div align="center">
     欢迎!请:
-    <button id="b1" style="background-color: darkgray">登陆</button>
+    <button id="b1" style="background-color: darkgray">返回首页</button>
 </div>
 <body>
 <div align="center">
@@ -106,6 +106,27 @@
     </div>
     <div class="mask"></div>
 </div>
+<div align="right">
+    <input type="button" value="修改用户信息" id="btn2">
+</div>
+<div class="pop_body2">
+    <div class="pop_con">
+        <div class="pop_title">
+            <h3>系统提示</h3>
+            <a href="#" class="abt">×</a>
+        </div>
+        <div>
+            选择要导出的表
+            <select id="excel">
+                <option value="1">用户详细信息表</option>
+            </select>
+        </div>
+        <div class="pop_footer">
+            <input type="button" value="确 定" class="confirm2">
+            <input type="button" value="取 消" class="cancel">
+        </div>
+    </div>
+</div>
 </body>
 </html>
 
@@ -134,7 +155,7 @@
     $(document).ready(function() {
         $("#b1").click(function (){
             alert("即将跳转到登录页！")
-            location="/login";
+            location="/index";
         });
     });
 </script>
@@ -174,6 +195,10 @@
                 data: {"username": username,"u_name": u_name,"age": age,"sex":sex},
                 dataType: "text",
                 contentType: "application/json;charset=UTF-8",
+                beforeSend: function(request) {
+                    //将cookie中的token信息放于请求头中
+                    request.setRequestHeader("authStr", $.cookie('authStr'));
+                },
                 success: function (response) {
                     alert(typeof response+" 姓名："+u_name+"  账号："+username+" 修改成功");
                 },
@@ -182,6 +207,42 @@
                 }
             })
         })
+
+        $('.pop_body2').hide()
+
+        $('#btn2').click(function(){
+            //显示弹窗的主界面
+            $('.pop_body2').show()
+            //设置animate动画初始值
+            $('.pop_con').css({'top':0,'opacity':0})
+            $('.pop_con').animate({'top':'50%','opacity':1})
+        })
+
+        //取消按钮和关闭按钮添加事件
+        $('.cancel,.pop_title a').click(function(){
+            $('.pop_con').animate({'top':0,'opacity':0},function(){
+                //隐藏弹窗的主界面
+                $('.pop_body2').hide()
+            })
+        })
+
+        $('.confirm2').click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/export/excel",
+                beforeSend: function(request) {
+                    //将cookie中的token信息放于请求头中
+                    request.setRequestHeader("authStr", $.cookie('authStr'));
+                },
+                success: function (response) {
+                    alert(" 表："+$("#excel").val( ) +  "导出成功");
+                },
+                error: function () {
+                    alert("failed to export!");
+                }
+            })
+        })
+
 
         $('.batchadd').click(function () {
             location="/testboot/batchaddpage";

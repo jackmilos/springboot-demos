@@ -3,6 +3,7 @@ package com.demo.utils.token;
 import com.demo.utils.RedisClient;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -26,7 +27,8 @@ public class RedisTokenHelp implements TokenHelper {
     public TokenModel create(Integer id) {
         String token = UUID.randomUUID().toString().replace("-","");
         TokenModel mode = new TokenModel(id, token);
-        redisClient.set(id == null ? null : String.valueOf(id), token, RedisClient.TOKEN_EXPIRES_SECOND);
+        Boolean flag = redisClient.set(id == null ? null : String.valueOf(id), token, RedisClient.TOKEN_EXPIRES_SECOND);
+        System.out.println(flag?"saved":"failed");
         return mode;
     }
 
@@ -76,6 +78,7 @@ public class RedisTokenHelp implements TokenHelper {
      */
     @Override
     public boolean delete(Integer id) {
+
         return redisClient.remove(id == null ? null : String.valueOf(id));
     }
 }

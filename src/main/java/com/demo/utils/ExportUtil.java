@@ -1,8 +1,7 @@
 package com.demo.utils;
 
-import com.demo.dao.mapper.UserMapper;
 import com.demo.entity.User;
-import com.demo.service.UserService;
+import com.demo.service.impl.UserServiceImpl;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,7 +22,7 @@ import java.util.List;
 @Component
 public class ExportUtil {
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @SuppressWarnings("dep-ann")
     public void ExportExcel(){

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Component
 public class RedisClient {
-    public static final long TOKEN_EXPIRES_SECOND = 1800;
+    public static final long TOKEN_EXPIRES_SECOND = 50000;
 
     @Autowired
     private StringRedisTemplate redisTpl;
@@ -42,13 +42,14 @@ public class RedisClient {
      * @return
      */
     public boolean set(String key, String value, long time){
-        boolean result = false;
+        boolean result = true;
         try{
             redisTpl.opsForValue().set(key, value);
             expire(key, time);
-            result = true;
+
         }catch (Exception e){
             e.printStackTrace();
+            result = false;
         }
         return result;
     }

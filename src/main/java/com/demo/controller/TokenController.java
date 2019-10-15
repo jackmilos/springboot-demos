@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.websocket.Session;
 
 /**
  * @author jack
@@ -56,6 +57,7 @@ public class TokenController {
     public Object logout(HttpServletRequest request){
         Integer userId = (Integer) request.getAttribute(NormalConstant.CURRENT_USER_ID);
         if(userId != null){
+            System.out.println(userId);
             tokenHelper.delete(userId);
         }
         return JsonData.buildSuccess();
