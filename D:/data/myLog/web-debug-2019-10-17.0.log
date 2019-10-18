@@ -1,0 +1,209 @@
+2019-10-17 10:37:39.445 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 10:38:45.780 [http-nio-8080-exec-7] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 10:38:45.802 [http-nio-8080-exec-7] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 10:38:45.826 [http-nio-8080-exec-7] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 10:39:26.468 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 10:39:26.468 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 10:39:26.472 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 11:15:26.214 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 11:15:50.452 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 11:15:50.472 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 11:15:50.487 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 11:20:15.808 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 11:20:38.360 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 11:20:38.378 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 11:20:38.394 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 11:24:08.774 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 11:24:35.467 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:38:33.641 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:39:07.470 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 13:39:07.489 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 13:39:07.505 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 13:42:33.288 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:42:48.855 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 13:42:48.873 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 13:42:48.890 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 13:44:22.602 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:50:08.751 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:50:24.881 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 13:50:24.899 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 13:50:24.915 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 13:53:27.251 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:56:12.380 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 13:59:53.786 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:01:14.658 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:02:00.714 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:03:03.396 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 14:03:03.414 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 14:03:03.430 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 14:09:04.122 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:09:53.493 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 14:09:53.513 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 14:09:53.530 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 14:10:01.808 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 14:10:01.808 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 14:10:01.810 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 14:10:33.225 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 14:10:33.226 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: null
+2019-10-17 14:10:33.226 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 0
+2019-10-17 14:12:27.883 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:13:59.192 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:14:54.102 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:16:07.837 [http-nio-8080-exec-9] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 14:16:07.855 [http-nio-8080-exec-9] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 14:16:07.871 [http-nio-8080-exec-9] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 14:16:11.678 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 14:16:11.679 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 14:16:11.681 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 14:54:51.570 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 14:58:42.643 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:18:34.971 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:20:05.849 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:21:05.256 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:24:17.898 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 15:24:17.917 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 15:24:17.932 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 15:27:34.821 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:33:41.023 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:39:36.763 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:40:52.464 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:44:24.699 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:46:20.033 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:46:54.617 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:48:09.922 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:49:40.000 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:51:25.539 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:06:03.080 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:06:19.440 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:11:28.186 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:14:10.584 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:14:49.000 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:14:49.018 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:14:49.036 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:14:55.385 [http-nio-8080-exec-9] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 16:14:55.386 [http-nio-8080-exec-9] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 16:14:55.389 [http-nio-8080-exec-9] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 16:24:24.594 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:24:56.994 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:24:57.013 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:24:57.028 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:26:27.679 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:26:44.851 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:26:44.870 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:26:44.887 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:27:32.804 [http-nio-8080-exec-7] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:27:32.804 [http-nio-8080-exec-7] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:27:32.805 [http-nio-8080-exec-7] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:27:35.107 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 16:27:35.107 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 16:27:35.109 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 16:29:43.495 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:29:43.496 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:29:43.497 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:30:27.235 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:51:47.066 [http-nio-8080-exec-2] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:51:47.087 [http-nio-8080-exec-2] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:51:47.102 [http-nio-8080-exec-2] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:51:50.212 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 16:51:50.212 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 16:51:50.213 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 16:55:05.826 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:55:18.806 [http-nio-8080-exec-2] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:55:18.825 [http-nio-8080-exec-2] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:55:18.841 [http-nio-8080-exec-2] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:56:01.003 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:56:17.833 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:56:17.852 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:56:17.868 [http-nio-8080-exec-6] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:56:53.952 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:57:14.426 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:57:14.445 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:57:14.460 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:57:35.257 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 16:57:59.175 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 16:57:59.195 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 16:57:59.213 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 16:59:45.597 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:00:19.479 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:00:19.497 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:00:19.514 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:03:53.542 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:04:08.329 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:04:08.348 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:04:08.364 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:05:50.874 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:06:00.199 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:06:00.217 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:06:00.233 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:22:19.442 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:23:06.855 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:23:06.874 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:23:06.890 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:24:09.277 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:24:21.465 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:24:21.483 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:24:21.499 [http-nio-8080-exec-5] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:24:50.389 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:24:50.390 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:24:50.391 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:25:01.428 [http-nio-8080-exec-8] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==>  Preparing: select id,u_name,username,u_password from t_user where username = ? 
+2019-10-17 17:25:01.428 [http-nio-8080-exec-8] DEBUG com.demo.dao.mapper.UserMapper.foundByName - ==> Parameters: lisi(String)
+2019-10-17 17:25:01.429 [http-nio-8080-exec-8] DEBUG com.demo.dao.mapper.UserMapper.foundByName - <==      Total: 1
+2019-10-17 17:25:04.095 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:25:04.095 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:25:04.097 [http-nio-8080-exec-10] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:25:10.030 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:25:10.030 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:25:10.031 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:30:18.922 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:30:26.043 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:30:26.061 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:30:26.077 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:30:33.988 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:30:33.988 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:30:33.990 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:31:30.166 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:32:08.906 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:32:08.925 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:32:08.944 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:32:12.702 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:32:12.702 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:32:12.703 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:33:24.236 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:33:52.399 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:33:52.416 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:33:52.434 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:34:03.696 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:34:03.696 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:34:03.697 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:40:30.087 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:40:37.774 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:40:37.792 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:40:37.808 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:40:44.853 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:40:44.853 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:40:44.854 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:44:30.164 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:44:37.966 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:44:37.985 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:44:38.002 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:44:44.712 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:44:44.712 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:44:44.712 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:44:44.712 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:44:44.713 [http-nio-8080-exec-4] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:44:44.715 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:45:43.989 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:45:57.539 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:45:57.559 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:45:57.576 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:46:01.347 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:46:01.348 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:46:01.348 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:51:21.436 [main] DEBUG com.demo.DemoApplication - Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 17:51:28.835 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:51:28.854 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:51:28.870 [http-nio-8080-exec-1] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
+2019-10-17 17:51:34.226 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==>  Preparing: select id,u_name,sex,age,username,u_password from t_user 
+2019-10-17 17:51:34.227 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - ==> Parameters: 
+2019-10-17 17:51:34.228 [http-nio-8080-exec-3] DEBUG com.demo.dao.mapper.UserMapper.listUser - <==      Total: 2
